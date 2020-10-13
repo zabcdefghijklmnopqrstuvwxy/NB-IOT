@@ -1,0 +1,117 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	easylog/Makefile	/^CC=g++$/;"	m
+CC	main/Makefile	/^CC=g++$/;"	m
+CC	mysql/Makefile	/^CC=g++$/;"	m
+CC	tcpserver/Makefile	/^CC=g++$/;"	m
+CEasyLog	easylog/CEasyLog.cpp	/^    CEasyLog::CEasyLog():m_logger(Poco::Logger::root())$/;"	f	class:COMMON::CEasyLog
+CEasyLog	easylog/CEasyLog.h	/^    class CEasyLog$/;"	c	namespace:COMMON
+COMMON	easylog/CEasyLog.cpp	/^namespace COMMON$/;"	n	file:
+COMMON	easylog/CEasyLog.h	/^namespace COMMON$/;"	n
+CONFIG_PATH	easylog/CEasyLog.cpp	17;"	d	file:
+CXXFLAGS	easylog/Makefile	/^CXXFLAGS= -w -g -O2 -std=c++11 -fPIC -I. -I..\/config -I..\/mysql  -I\/usr\/local\/include\/Poco$/;"	m
+CXXFLAGS	main/Makefile	/^CXXFLAGS= -w -g -O2 -std=c++11 -I. -I..\/tcpserver -I..\/mysql -I..\/easylog -I\/usr\/local\/include\/Poco$/;"	m
+CXXFLAGS	mysql/Makefile	/^CXXFLAGS= -w -g -O2 -std=c++11 -fPIC -I. -I..\/config -I\/usr\/local\/include\/Poco$/;"	m
+CXXFLAGS	tcpserver/Makefile	/^CXXFLAGS= -w -g -O2 -std=c++11 -fPIC -I. -I..\/config -I..\/mysql -I..\/easylog  -I\/usr\/local\/include\/Poco$/;"	m
+CloseInstance	easylog/CEasyLog.cpp	/^    void CEasyLog::CloseInstance()$/;"	f	class:COMMON::CEasyLog
+Config_h	config/Config.h	2;"	d
+CustomTCPConnection	tcpserver/CustomTCPConnection.cpp	/^CustomTCPConnection::CustomTCPConnection(const StreamSocket& s):$/;"	f	class:CustomTCPConnection
+CustomTCPConnection	tcpserver/CustomTCPConnection.hpp	/^class CustomTCPConnection: public TCPServerConnection$/;"	c
+CustomTCPConnectionFactory	tcpserver/CustomTCPConnectionFactory.hpp	/^class CustomTCPConnectionFactory: public Poco::Net::TCPServerConnectionFactory$/;"	c
+CustomTCPConnectionFactory_hpp	tcpserver/CustomTCPConnectionFactory.hpp	2;"	d
+CustomTCPConnection_hpp	tcpserver/CustomTCPConnection.hpp	2;"	d
+CustomTCPServer	tcpserver/CustomTCPServer.hpp	/^    CustomTCPServer() {}$/;"	f	class:CustomTCPServer
+CustomTCPServer	tcpserver/CustomTCPServer.hpp	/^class CustomTCPServer : public ServerApplication$/;"	c
+CustomTCPServer_hpp	tcpserver/CustomTCPServer.hpp	2;"	d
+EchoUsage	make.sh	/^EchoUsage()$/;"	f
+GetInstance	easylog/CEasyLog.cpp	/^    CEasyLog* CEasyLog::GetInstance()$/;"	f	class:COMMON::CEasyLog
+GetLevelString	easylog/CEasyLog.cpp	/^    std::string CEasyLog::GetLevelString()$/;"	f	class:COMMON::CEasyLog
+GetLogLevel	easylog/CEasyLog.cpp	/^    int CEasyLog::GetLogLevel()$/;"	f	class:COMMON::CEasyLog
+GetMysql	tcpserver/CustomTCPConnection.cpp	/^PocoMySQL* CustomTCPConnection::GetMysql()$/;"	f	class:CustomTCPConnection
+HEARTBEAT_TIMEOUT	tcpserver/CustomTCPConnection.cpp	16;"	d	file:
+Init	easylog/CEasyLog.cpp	/^    int CEasyLog::Init(const Poco::Util::AbstractConfiguration& config)$/;"	f	class:COMMON::CEasyLog
+LDFLAGS	easylog/Makefile	/^LDFLAGS=-L\/usr\/local\/lib  -L..\/lib$/;"	m
+LDFLAGS	main/Makefile	/^LDFLAGS=-L\/usr\/local\/lib -L..\/lib $/;"	m
+LDFLAGS	mysql/Makefile	/^LDFLAGS=-L\/usr\/local\/lib $/;"	m
+LDFLAGS	tcpserver/Makefile	/^LDFLAGS=-L\/usr\/local\/lib  -L..\/lib$/;"	m
+LIBNAME	easylog/Makefile	/^LIBNAME=$(notdir $(CURDIR))$/;"	m
+LIBNAME	mysql/Makefile	/^LIBNAME=$(notdir $(CURDIR))$/;"	m
+LIBNAME	tcpserver/Makefile	/^LIBNAME=$(notdir $(CURDIR))$/;"	m
+LIBS	easylog/Makefile	/^LIBS=-lPocoUtil -lPocoXML -lPocoNet -lPocoFoundation -lPocoData -lPocoJSON -lPocoMongoDB -lPocoDataMySQL -lcrypto -lssl -lpthread -lrt -ldl -lmysql$/;"	m
+LIBS	main/Makefile	/^LIBS=-lPocoUtil -lPocoXML -lPocoNet -lPocoFoundation -lPocoData -lPocoJSON -lPocoMongoDB -lPocoDataMySQL -lcrypto -lssl -lpthread -lrt -ldl -lmysql -ltcpserver -leasylog$/;"	m
+LIBS	mysql/Makefile	/^LIBS=-lPocoUtil -lPocoXML -lPocoNet -lPocoFoundation -lPocoData -lPocoJSON -lPocoMongoDB -lPocoDataMySQL -lcrypto -lssl -lpthread -lrt -ldl$/;"	m
+LIBS	tcpserver/Makefile	/^LIBS=-lPocoUtil -lPocoXML -lPocoNet -lPocoFoundation -lPocoData -lPocoJSON -lPocoMongoDB -lPocoDataMySQL -lcrypto -lssl -lpthread -lrt -ldl -lmysql -leasylog$/;"	m
+LINKFLAGS	easylog/Makefile	/^LINKFLAGS= -fPIC -shared $/;"	m
+LINKFLAGS	mysql/Makefile	/^LINKFLAGS= -fPIC -shared $/;"	m
+LINKFLAGS	tcpserver/Makefile	/^LINKFLAGS= -fPIC -shared $/;"	m
+LogDebug	easylog/CEasyLog.h	46;"	d
+LogError	easylog/CEasyLog.h	52;"	d
+LogFatal	easylog/CEasyLog.h	54;"	d
+LogInfo	easylog/CEasyLog.h	48;"	d
+LogTrace	easylog/CEasyLog.h	44;"	d
+LogWarn	easylog/CEasyLog.h	50;"	d
+Log_Debug	easylog/CEasyLog.cpp	/^    void CEasyLog::Log_Debug(const std::string &msg,Poco::Message::Priority pri,const char *file,int line)$/;"	f	class:COMMON::CEasyLog
+Log_Error	easylog/CEasyLog.cpp	/^    void CEasyLog::Log_Error(const std::string &msg,Poco::Message::Priority pri,const char *file,int line)$/;"	f	class:COMMON::CEasyLog
+Log_Fatal	easylog/CEasyLog.cpp	/^    void CEasyLog::Log_Fatal(const std::string &msg,Poco::Message::Priority pri,const char *file,int line)$/;"	f	class:COMMON::CEasyLog
+Log_Info	easylog/CEasyLog.cpp	/^    void CEasyLog::Log_Info(const std::string &msg,Poco::Message::Priority pri,const char *file,int line)$/;"	f	class:COMMON::CEasyLog
+Log_Trace	easylog/CEasyLog.cpp	/^    void CEasyLog::Log_Trace(const std::string &msg,Poco::Message::Priority pri,const char *file,int line)$/;"	f	class:COMMON::CEasyLog
+Log_Warn	easylog/CEasyLog.cpp	/^    void CEasyLog::Log_Warn(const std::string &msg,Poco::Message::Priority pri,const char *file,int line)$/;"	f	class:COMMON::CEasyLog
+MakeExce	make.sh	/^MakeExce()$/;"	f
+NBDEV	tcpserver/CustomTCPConnection.cpp	/^typedef Poco::Tuple<std::string, Int32, std::string, std::string> NBDEV;$/;"	t	file:
+OBJS	easylog/Makefile	/^OBJS=$(patsubst %cpp,%o,$(SRCS))$/;"	m
+OBJS	main/Makefile	/^OBJS=$(patsubst %cpp,%o,$(SRCS))$/;"	m
+OBJS	mysql/Makefile	/^OBJS=$(patsubst %cpp,%o,$(SRCS))$/;"	m
+OBJS	tcpserver/Makefile	/^OBJS=$(patsubst %cpp,%o,$(SRCS))$/;"	m
+POCOMYSQL_H	mysql/pocomysql.h	2;"	d
+PocoMySQL	mysql/pocomysql.cpp	/^PocoMySQL::PocoMySQL() {$/;"	f	class:PocoMySQL
+PocoMySQL	mysql/pocomysql.cpp	/^PocoMySQL::PocoMySQL(const PocoMySQL& orig) {$/;"	f	class:PocoMySQL
+PocoMySQL	mysql/pocomysql.cpp	/^PocoMySQL::PocoMySQL(string connectString){$/;"	f	class:PocoMySQL
+PocoMySQL	mysql/pocomysql.cpp	/^PocoMySQL::PocoMySQL(string host,int port,string user,string password,string db){$/;"	f	class:PocoMySQL
+PocoMySQL	mysql/pocomysql.h	/^class PocoMySQL {$/;"	c
+SRCS	easylog/Makefile	/^SRCS=$(wildcard *.cpp)$/;"	m
+SRCS	main/Makefile	/^SRCS=$(wildcard *.cpp)$/;"	m
+SRCS	mysql/Makefile	/^SRCS=$(wildcard *.cpp)$/;"	m
+SRCS	tcpserver/Makefile	/^SRCS=$(wildcard *.cpp)$/;"	m
+ServerPort	config/Config.h	4;"	d
+SetLogLevel	easylog/CEasyLog.cpp	/^    int CEasyLog::SetLogLevel(const std::string &level)$/;"	f	class:COMMON::CEasyLog
+SetLogLevel	easylog/CEasyLog.cpp	/^    int CEasyLog::SetLogLevel(int level)$/;"	f	class:COMMON::CEasyLog
+TARGET	easylog/Makefile	/^TARGET=..\/lib\/lib$(LIBNAME).so$/;"	m
+TARGET	main/Makefile	/^TARGET=a.out$/;"	m
+TARGET	mysql/Makefile	/^TARGET=..\/lib\/lib$(LIBNAME).so$/;"	m
+TARGET	tcpserver/Makefile	/^TARGET=..\/lib\/lib$(LIBNAME).so$/;"	m
+_connected	mysql/pocomysql.h	/^    bool _connected;$/;"	m	class:PocoMySQL
+_connectionstring	mysql/pocomysql.h	/^    string _connectionstring;$/;"	m	class:PocoMySQL
+_db	mysql/pocomysql.h	/^    string _db;$/;"	m	class:PocoMySQL
+_host	mysql/pocomysql.h	/^    string _host;$/;"	m	class:PocoMySQL
+_pSession	mysql/pocomysql.h	/^    Session* _pSession;$/;"	m	class:PocoMySQL
+_password	mysql/pocomysql.h	/^    string _password;$/;"	m	class:PocoMySQL
+_port	mysql/pocomysql.h	/^    int _port;$/;"	m	class:PocoMySQL
+_user	mysql/pocomysql.h	/^    string _user;$/;"	m	class:PocoMySQL
+bConnectState	tcpserver/CustomTCPConnection.cpp	/^bool CustomTCPConnection::bConnectState = false;$/;"	m	class:CustomTCPConnection	file:
+bConnectState	tcpserver/CustomTCPConnection.hpp	/^	static bool bConnectState;$/;"	m	class:CustomTCPConnection
+connect	mysql/pocomysql.cpp	/^bool PocoMySQL::connect(){$/;"	f	class:PocoMySQL
+createConnection	tcpserver/CustomTCPConnectionFactory.cpp	/^TCPServerConnection* CustomTCPConnectionFactory::createConnection(const StreamSocket& socket)$/;"	f	class:CustomTCPConnectionFactory
+execute	mysql/pocomysql.cpp	/^int PocoMySQL::execute(string sql){$/;"	f	class:PocoMySQL
+initialize	tcpserver/CustomTCPServer.cpp	/^void CustomTCPServer::initialize(Application& self)$/;"	f	class:CustomTCPServer
+m_heartbeat	tcpserver/CustomTCPConnection.hpp	/^	Poco::Timestamp m_heartbeat;$/;"	m	class:CustomTCPConnection
+m_instance	tcpserver/CustomTCPConnection.cpp	/^PocoMySQL *CustomTCPConnection::m_instance = NULL;$/;"	m	class:CustomTCPConnection	file:
+m_instance	tcpserver/CustomTCPConnection.hpp	/^	static PocoMySQL *m_instance;$/;"	m	class:CustomTCPConnection
+m_logIns	easylog/CEasyLog.cpp	/^    CEasyLog* CEasyLog::m_logIns = NULL;$/;"	m	class:COMMON::CEasyLog	file:
+m_logIns	easylog/CEasyLog.h	/^            static CEasyLog* 	   m_logIns;$/;"	m	class:COMMON::CEasyLog
+m_logger	easylog/CEasyLog.h	/^			Poco::Logger&		   m_logger;$/;"	m	class:COMMON::CEasyLog
+m_mutex	easylog/CEasyLog.cpp	/^    Poco::FastMutex CEasyLog::m_mutex;$/;"	m	class:COMMON::CEasyLog	file:
+m_mutex	easylog/CEasyLog.h	/^            static Poco::FastMutex m_mutex;$/;"	m	class:COMMON::CEasyLog
+main	main/main.cpp	/^int main(int argc, char **argv)$/;"	f
+main	tcpserver/CustomTCPServer.cpp	/^int CustomTCPServer::main(const std::vector<std::string>& args)$/;"	f	class:CustomTCPServer
+nClientIndicate	tcpserver/CustomTCPConnection.cpp	/^static int nClientIndicate = 0; $/;"	v	file:
+priorities	easylog/CEasyLog.cpp	/^    static std::string priorities[] = $/;"	m	namespace:COMMON	file:
+query	mysql/pocomysql.h	/^    bool query(string sql,T &results){$/;"	f	class:PocoMySQL
+run	tcpserver/CustomTCPConnection.cpp	/^void CustomTCPConnection::run()$/;"	f	class:CustomTCPConnection
+uninitialize	tcpserver/CustomTCPServer.cpp	/^void CustomTCPServer::uninitialize()$/;"	f	class:CustomTCPServer
+~CEasyLog	easylog/CEasyLog.cpp	/^    CEasyLog::~CEasyLog()$/;"	f	class:COMMON::CEasyLog
+~CustomTCPServer	tcpserver/CustomTCPServer.hpp	/^    ~CustomTCPServer() {}$/;"	f	class:CustomTCPServer
+~PocoMySQL	mysql/pocomysql.cpp	/^PocoMySQL::~PocoMySQL() {$/;"	f	class:PocoMySQL

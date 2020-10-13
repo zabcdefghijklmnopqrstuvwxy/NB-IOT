@@ -3,6 +3,7 @@
 
 #include "Poco/Net/TCPServerConnection.h"
 #include "Poco/Net/StreamSocket.h"
+#include "Poco/Timer.h"
 #include "pocomysql.h"
 #include <string>
 
@@ -19,6 +20,7 @@ public:
 private:
 	static PocoMySQL *m_instance;
 	static bool bConnectState;
+	Poco::Timestamp m_heartbeat;
 };
 
 #endif /* CustomTCPConnection_hpp */

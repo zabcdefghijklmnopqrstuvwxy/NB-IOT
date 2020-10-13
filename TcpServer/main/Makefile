@@ -3,10 +3,10 @@ CC=g++
 SRCS=$(wildcard *.cpp)
 OBJS=$(patsubst %cpp,%o,$(SRCS))
 
-CXXFLAGS= -w -g -O2 -std=c++11 -I. -I../tcpserver -I../mysql -I/usr/local/include/Poco
+CXXFLAGS= -w -g -O2 -std=c++11 -I. -I../tcpserver -I../mysql -I../easylog -I/usr/local/include/Poco
 #CXXFLAGS= -w -g -O2 -std=c++11
 LDFLAGS=-L/usr/local/lib -L../lib 
-LIBS=-lPocoUtil -lPocoXML -lPocoNet -lPocoFoundation -lPocoData -lPocoJSON -lPocoMongoDB -lPocoDataMySQL -lcrypto -lssl -lpthread -lrt -ldl -lmysql -ltcpserver
+LIBS=-lPocoUtil -lPocoXML -lPocoNet -lPocoFoundation -lPocoData -lPocoJSON -lPocoMongoDB -lPocoDataMySQL -lcrypto -lssl -lpthread -lrt -ldl -lmysql -ltcpserver -leasylog
 
 TARGET=a.out
 

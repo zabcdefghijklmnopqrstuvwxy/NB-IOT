@@ -14,6 +14,11 @@ MakeExce()
 	make $1
 	cd ..
 
+	echo "######################### Make Log ##########################"
+	cd easylog
+	make $1
+	cd ..
+
 	echo "######################### Make TcpServer ##########################"
 	cd tcpserver
 	make $1
