@@ -10,7 +10,7 @@ form = cgi.FieldStorage()
 str_data_1  =  form.getvalue('data_1')
 str_data_2  =  form.getvalue('data_2')
 
-conn = connect(host='localhost',port=3306,user='root',password='123456',database='NBIOT',charset='utf8')
+conn = connect(host='localhost',port=3306,user='root',password='',database='NBIOT',charset='utf8')
 # ..Cursor..
 cursor = conn.cursor()
 # ..sql..
@@ -35,7 +35,7 @@ print("</div>")
 print('<div style="width=800px;height:800px;margin:0 auto;border:1px solid #555;background-color:white;">')
 
 print('<div style="margin:100px auto;width:400px;height:600px;">')
-print("id&nbsp;&nbsp;&nbsp;&nbsp;timestamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;devno&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempeature")
+print("id&nbsp;&nbsp;&nbsp;&nbsp;devno&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timestamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempeature")
 print("<br></br>")
 for temp in cursor.fetchall():
 	print(temp[0])

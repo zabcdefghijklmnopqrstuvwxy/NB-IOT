@@ -20,4 +20,6 @@
 Web端使用Python+CGI+Html+Mysql+Tomcat。Tomcat的Http服务器，接收到Http请求转到CGI的python后端处理，读取Mysql数据显示到Web页面上。
 Html会定时60秒显示。
 
+Web链接为 47.104.60.116:8080/nbiot
+
 
