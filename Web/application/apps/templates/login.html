@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" Contene-type:text/html>
+
+<head>
+	<meta charset='UTF-8'>
+	<title> nbdev </title>
+	<link rel="stylesheet" href="./static/login.css">
+</head>
+
+<body>
+	<div class="title">
+		<h2> NBDATA LIST </h2>
+	</div>
+	<div class="nbdata">
+	<table class="table table-bordered">
+	<tr>
+		<th> id </th>
+		<th> devno </th>
+		<th> timestamp </th>
+		<th> gps </th>
+        <th> tempeature </th>
+
+    <tr>
+		{% for i in nbdev %}
+		<tr>
+			<td>{{i[0]}}</td>
+			<td>{{i[1]}}</td>
+			<td>{{i[2]}}</td>
+			<td>{{i[3]}}</td>
+			<td>{{i[4]}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	</div>
+</body>
+</html>
