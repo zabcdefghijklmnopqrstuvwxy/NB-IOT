@@ -5,7 +5,7 @@
 }
 body{
     /* 100%窗口高度 */
-    height: 100px;
+    height: 100vh;
     /* 弹性布局 居中 */
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@ body{
     width: 63px;
     height: 58px;
     /* 背景图片 */
-    background: url("./static/image/openeye.png") no-repeat;
+    background: url("./image/openeye.png") no-repeat;
     /* 绝对定位 */
     position: absolute;
     top: -60px;
@@ -98,7 +98,7 @@ body{
     position: absolute;
     left: 20px;
     top: 40px;
-    background: url("./static/image/closeeye.png") no-repeat;
+    background: url("./image/closeeye.png") no-repeat;
     transform: rotate(-20deg);
     transition: 0.3s ease-out;
 }
