@@ -4,7 +4,7 @@ from pymysql import *
 
 app = Flask(__name__,static_folder='.',static_url_path='',template_folder='./templates')
 
-@app.route('/login',methods=['POST'])
+@app.route('/login',methods=['GET', 'POST'])
 def login():
     account=request.form['account']
     passwd=request.form['passwd']
@@ -13,7 +13,7 @@ def login():
     if account == 'admin' and passwd == '123456':
         conn = connect(host='localhost',port=3306,user='root',password='123456',database='NBIOT',charset='utf8')
         cursor = conn.cursor()
-        sql = "select * from NBDEV order by id desc limit 100"
+        sql = "select * from NBDEV order by id desc limit 30"
         cursor.execute(sql)
         nbdev = cursor.fetchall()
         return render_template('login.html',nbdev=nbdev)

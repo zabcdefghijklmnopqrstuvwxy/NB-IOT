@@ -18,16 +18,40 @@
 	margin:0 auto;
 	width:200px;
 	height:80px;
-	
+	text-align:center;	
 }
 
 .nbdata
 {
 	width:800px;
-	height:800px;
+	height:900px;
 	margin:0 auto;
 	border:1px solid #555;
 	background-color:white;
 }
+
+table{
+	width:90%;
+	background:#ccc;
+	margin:10px auto;
+	border-collapse:collapse;
+}
+
+th,td{
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	border:1px solid #ccc;
+}
+
+th{
+	background:#eee;
+	font-weight:normal;
+}
+
+tr:hover{
+	background:#fff;
+}
+
 
 

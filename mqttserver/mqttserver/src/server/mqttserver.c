@@ -108,12 +108,15 @@ int jsonparse(char *buf)
 
 	int nCmd = 0;
 	char *table = "NBDEV";
-	char *key[4] = {"devno", "timestamp", "gps", "tempeature"};
+	char *key[4] = {"timestamp","temp","humi","lon"};
 	char *value[4];
-	char timestamp[64];
-
-	cJSON * root = NULL, *item = NULL, *devitem = NULL;
-	cJSON *gpsitem = NULL, *tempitem = NULL;
+	char timestamp[32];
+	char temp[16];
+	char humi[16];
+	char lon[32];
+	
+	cJSON * root = NULL, *item = NULL;
+	cJSON *tempitem = NULL, *humiitem = NULL, *lonitem = NULL;
 	root = cJSON_Parse(buf);
 
 	if(!root)
@@ -144,34 +147,34 @@ int jsonparse(char *buf)
 				return -3;
 			}
 
-			devitem = cJSON_GetObjectItem( item , "devno" );
+			tempitem = cJSON_GetObjectItem( item , "temp" );
 			
-			if(!devitem || !devitem->valuestring)
+			if(!tempitem)
 			{
 				cJSON_Delete(root);
-				log_e("cat not find profile devno\n");
+				log_e("cat not find profile temp\n");
 				return -3;
 			}	
-			log_i("devno is %s\n",devitem->valuestring); 
+			log_i("temp is %d\n",tempitem->valueint); 
 
-			gpsitem = cJSON_GetObjectItem( item , "gps" );
-			if(!gpsitem || !gpsitem->valuestring)
+			humiitem = cJSON_GetObjectItem( item , "humi" );
+			if(!humiitem)
 			{
 				cJSON_Delete(root);
-				log_e("cat not find profile gps\n");
+				log_e("cat not find profile humi\n");
 				return -3;
 			}
-			log_i("gps is %s\n",gpsitem->valuestring); 
+			log_i("humi is %d\n",humiitem->valueint); 
 			
-			tempitem = cJSON_GetObjectItem( item , "tempeature" );
-			if(!tempitem || !tempitem->valuestring)
+			lonitem = cJSON_GetObjectItem( item , "lon" );
+			if(!lonitem )
 			{
 				cJSON_Delete(root);
-				log_e("cat not find profile tempature\n");
+				log_e("cat not find profile location\n");
 				return -3;
 			}
 		
-			log_i("tempitem is %s\n",tempitem->valuestring); 
+			log_i("lon is %lf\n",lonitem->valuedouble); 
 		}break;
 		default:;
 	}
@@ -179,10 +182,19 @@ int jsonparse(char *buf)
 	memset(timestamp, 0, sizeof(timestamp));
 	sprintf(timestamp, "%d", time(NULL));
 
-	value[0] = strdup((const char*)devitem->valuestring);
-	value[1] = strdup((const char*)timestamp);
-	value[2] = strdup((const char*)gpsitem->valuestring);
-	value[3] = strdup((const char*)tempitem->valuestring);
+	memset(temp, 0, sizeof(temp));
+	sprintf(temp, "%d", tempitem->valueint);
+
+	memset(humi, 0, sizeof(humi));
+	sprintf(humi, "%d", humiitem->valueint);
+
+	memset(lon, 0, sizeof(lon));
+	sprintf(lon, "%lf", lonitem->valuedouble);
+	
+	value[0] = strdup((const char*)timestamp);
+	value[1] = strdup((const char*)temp);
+	value[2] = strdup((const char*)humi);
+	value[3] = strdup((const char*)lon);
 	
 	sqlWrapper_Insert(table, 4, key, value);
 	

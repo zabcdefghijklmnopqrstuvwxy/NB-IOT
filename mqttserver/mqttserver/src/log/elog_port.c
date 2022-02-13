@@ -62,7 +62,7 @@ ElogErrCode elog_port_init(void) {
  */
 void elog_port_output(const char *log, size_t size) {
     /* output to terminal */
-    printf("%.*s", (int)size, log);
+ //   printf("%.*s", (int)size, log);
 #ifdef ELOG_FILE_ENABLE
     /* write the file */
     elog_file_write(log, size);

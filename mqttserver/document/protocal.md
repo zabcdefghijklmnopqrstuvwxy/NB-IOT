@@ -29,16 +29,14 @@ payload:为该命令下携带的有效数据，应根据以下命令说明来填
 	"id":xxx,
 	"payload":
 	{
-		"devno":"xxxxx",
-		"gps":"xxxxx",
-		"tempeature":"xxxxx"
+		"temp":21,
+		"humi":70,
+		"lon":3743.519728
 	}	
 }
 
 cmd =100表示上报数据的命令码
 payload的参数说明如下
-devno为上报的终端设备的uuid
-gps为上报的终端设备的gps信息
-tempeature为上报的终端设备的温度信息
-
-
+temp为上报的终端设备的温度信息
+humi为上报的终端设备的温度信息
+lon为上报的终端设备的gps信息
