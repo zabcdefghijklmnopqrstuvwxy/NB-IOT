@@ -20,6 +20,6 @@
 Web端使用FLASK+Html+Mysql+HTML。后端使用的Flask框架读取Mysql数据显示到Web页面上。
 Html会定时60秒显示。
 
-Web链接为 47.104.60.116:5000
+Web链接为 47.104.60.116:8080/nbiot
 
 
